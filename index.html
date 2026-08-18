@@ -9,13 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Gradient Overlays -->
-    <div class="bg-gradient bg-gradient-left"></div>
-    <div class="bg-gradient bg-gradient-right"></div>
+    <!-- Particles Background -->
+    <div id="tsparticles" class="particles-bg"></div>
 
     <!-- Navigation -->
     <nav class="nav" id="nav">
@@ -53,17 +53,19 @@
 
     <!-- Hero -->
     <section class="section hero" id="hero">
+        <div class="hero-bg-image"></div>
+        <div class="hero-gradient-overlay"></div>
         <div class="wrap">
             <div class="hero-grid">
                 <div class="hero-left">
-                    <h1>A competition for people who like hard problems<span class="gold">.</span></h1>
-                    <p class="hero-sub">Solve challenges. Earn points. See how you compare. Make it far enough and you could win a conference trip to San Francisco.</p>
-                    <div class="hero-actions">
-                        <a href="#waitlist" class="btn btn-primary">Join the waitlist</a>
+                    <h1 data-aos="fade-up" data-aos-duration="800">A competition for people who like hard problems<span class="gold">.</span></h1>
+                    <p class="hero-sub" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">Solve challenges. Earn points. See how you compare. Make it far enough and you could win a conference trip to San Francisco.</p>
+                    <div class="hero-actions" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                        <a href="#waitlist" class="btn btn-primary btn-glow">Join the waitlist</a>
                     </div>
-                    <p class="hero-note">Be among the first to receive the entry challenge.</p>
+                    <p class="hero-note" data-aos="fade-up" data-aos-duration="600" data-aos-delay="450">Be among the first to receive the entry challenge.</p>
 
-                    <div class="hero-flow">
+                    <div class="hero-flow" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
                         <div class="flow-item">Solve</div>
                         <span class="flow-sep">&rarr;</span>
                         <div class="flow-item">Score</div>
@@ -73,12 +75,12 @@
                         <div class="flow-item flow-item--gold">San Francisco</div>
                     </div>
 
-                    <div class="hero-meta">
+                    <div class="hero-meta" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
                         <img src="images/logo-mobile.svg" alt="" class="hero-meta-logo">
                         <span class="mono-label">Season 01</span>
                     </div>
                 </div>
-                <div class="hero-right">
+                <div class="hero-right" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
                     <div class="widget">
                         <span class="mono-label">Competition status</span>
                         <div class="widget-rows">
@@ -110,20 +112,21 @@
 
     <!-- Prize -->
     <section class="section" id="prize">
+        <div class="section-gradient section-gradient--right"><img src="images/gradient-about.png" alt=""></div>
         <div class="wrap">
             <div class="big-statement">
-                <h2>Solve your way to San Francisco<span class="gold">.</span></h2>
-                <p class="sub">The strongest performance in the competition leads to the main prize.</p>
+                <h2 data-aos="fade-up" data-aos-duration="800">Solve your way to San Francisco<span class="gold">.</span></h2>
+                <p class="sub" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">The strongest performance in the competition leads to the main prize.</p>
             </div>
 
-            <div class="prize-highlight">
+            <div class="prize-highlight" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                 <h3>San Francisco</h3>
                 <p>Conference ticket + flights for the winner.</p>
             </div>
 
             <div class="section-divider-top"></div>
-            <p class="sub-label">And there&rsquo;s more to earn along the way.</p>
-            <div class="reward-pills">
+            <p class="sub-label" data-aos="fade-up" data-aos-duration="600">And there&rsquo;s more to earn along the way.</p>
+            <div class="reward-pills" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
                 <span class="pill">Expert feedback</span>
                 <span class="pill">Special events</span>
                 <span class="pill">Chess &amp; poker days</span>
@@ -138,22 +141,22 @@
     <section class="section" id="how-it-works">
         <div class="wrap">
             <div class="section-intro">
-                <h2>A challenge for people who like hard problems<span class="gold">.</span></h2>
-                <p class="sub">This isn&rsquo;t a single online quiz. It&rsquo;s an ongoing competition built around solving problems, earning points and progressing through increasingly difficult challenges.</p>
+                <h2 data-aos="fade-up" data-aos-duration="800">A challenge for people who like hard problems<span class="gold">.</span></h2>
+                <p class="sub" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">This isn&rsquo;t a single online quiz. It&rsquo;s an ongoing competition built around solving problems, earning points and progressing through increasingly difficult challenges.</p>
             </div>
 
             <div class="pillars">
-                <div class="pillar-item">
+                <div class="pillar-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
                     <span class="mono-label">01</span>
                     <h3>Solve</h3>
                     <p>Take on problems designed to test how you think and how well you can find a way through.</p>
                 </div>
-                <div class="pillar-item">
+                <div class="pillar-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
                     <span class="mono-label">02</span>
                     <h3>Score</h3>
                     <p>Complete scored challenges and collect points.</p>
                 </div>
-                <div class="pillar-item">
+                <div class="pillar-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <span class="mono-label">03</span>
                     <h3>Compare</h3>
                     <p>See where you stand on the seasonal leaderboard.</p>
@@ -164,46 +167,47 @@
 
     <!-- Journey -->
     <section class="section" id="journey">
+        <div class="section-gradient section-gradient--left"><img src="images/gradient-hero.png" alt=""></div>
         <div class="wrap">
             <div class="steps-list">
-                <div class="step-row">
+                <div class="step-row" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
                     <span class="mono-label step-num">01</span>
                     <h4>Join the waitlist</h4>
                     <p>We&rsquo;ll send you the first challenge when it launches.</p>
                 </div>
-                <div class="step-row">
+                <div class="step-row" data-aos="fade-up" data-aos-duration="600" data-aos-delay="50">
                     <span class="mono-label step-num">02</span>
                     <h4>Solve the entry challenge</h4>
                     <p>Your first problem is your way into the competition.</p>
                 </div>
-                <div class="step-row">
+                <div class="step-row" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
                     <span class="mono-label step-num">03</span>
                     <h4>Enter the game</h4>
                     <p>If you solve it, register your score and choose the nickname you&rsquo;ll compete under.</p>
                 </div>
-                <div class="step-row">
+                <div class="step-row" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
                     <span class="mono-label step-num">04</span>
                     <h4>Solve &amp; score</h4>
                     <p>Take on online challenges and regular in-person competitions.</p>
                 </div>
-                <div class="step-row">
+                <div class="step-row" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
                     <span class="mono-label step-num">05</span>
                     <h4>Move up</h4>
                     <p>Every scored challenge can move you higher on the seasonal leaderboard.</p>
                 </div>
-                <div class="step-row">
+                <div class="step-row" data-aos="fade-up" data-aos-duration="600" data-aos-delay="250">
                     <span class="mono-label step-num">06</span>
                     <h4>Unlock more</h4>
                     <p>Build your reputation and gain access to more challenges, content and events.</p>
                 </div>
-                <div class="step-row">
+                <div class="step-row" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
                     <span class="mono-label step-num">07</span>
                     <h4>Compete for the main prize</h4>
                     <p>The strongest solvers make their way towards the final stages &mdash; and San Francisco.</p>
                 </div>
             </div>
-            <div class="section-cta">
-                <a href="#waitlist" class="btn btn-primary">Join the waitlist</a>
+            <div class="section-cta" data-aos="fade-up" data-aos-duration="600" data-aos-delay="350">
+                <a href="#waitlist" class="btn btn-primary btn-glow">Join the waitlist</a>
                 <span class="muted">Get the entry challenge when it goes live.</span>
             </div>
         </div>
@@ -213,22 +217,22 @@
     <section class="section">
         <div class="wrap">
             <div class="split-intro">
-                <h2>If this sounds like fun, this was built for you<span class="gold">.</span></h2>
-                <p class="sub split-intro-sub">Problems without obvious answers. Strong competition. Real stakes &mdash; points, progression, earned rewards, and a path to San Francisco.</p>
+                <h2 data-aos="fade-up" data-aos-duration="800">If this sounds like fun, this was built for you<span class="gold">.</span></h2>
+                <p class="sub split-intro-sub" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">Problems without obvious answers. Strong competition. Real stakes &mdash; points, progression, earned rewards, and a path to San Francisco.</p>
             </div>
 
             <div class="cards-3">
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
                     <span class="mono-label">Feature</span>
                     <h4>Hard problems<span class="gold">.</span></h4>
                     <p>Problems without obvious answers. The kind that make you stop, think and try another way.</p>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
                     <span class="mono-label">Feature</span>
                     <h4>Strong competition<span class="gold">.</span></h4>
                     <p>A score becomes interesting when you&rsquo;re comparing it with people who are good too.</p>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <span class="mono-label">Feature</span>
                     <h4>Real stakes<span class="gold">.</span></h4>
                     <p>Points. Progression. Earned rewards. And a path to San Francisco.</p>
@@ -239,29 +243,30 @@
 
     <!-- Competition Tiers -->
     <section class="section" id="competition">
+        <div class="section-gradient section-gradient--right"><img src="images/gradient-about.png" alt=""></div>
         <div class="wrap">
             <div class="section-intro">
-                <h2>The problems get harder. So do the stakes<span class="gold">.</span></h2>
+                <h2 data-aos="fade-up" data-aos-duration="800">The problems get harder. So do the stakes<span class="gold">.</span></h2>
             </div>
 
             <div class="cards-3 cards-3--tiers">
-                <div class="card card--tier">
+                <div class="card card--tier" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
                     <span class="mono-label">Level 1</span>
                     <h4>Online challenges</h4>
                     <p>Shorter problems. Limited time. Earn points throughout the season.</p>
                 </div>
-                <div class="card card--tier card--featured">
+                <div class="card card--tier card--featured" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
                     <span class="mono-label">Level 2</span>
                     <h4>In-person rounds</h4>
                     <p>Bigger problems. More time. One attempt. No AI.</p>
                 </div>
-                <div class="card card--tier">
+                <div class="card card--tier" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <span class="mono-label">Level 3</span>
                     <h4>Final stages</h4>
                     <p>The strongest solvers face the most demanding challenges &mdash; and compete for the biggest rewards.</p>
                 </div>
             </div>
-            <p class="tiers-note muted">Easy to understand. Increasingly hard to master.</p>
+            <p class="tiers-note muted" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">Easy to understand. Increasingly hard to master.</p>
         </div>
     </section>
 
@@ -269,7 +274,7 @@
     <section class="section" id="leaderboard">
         <div class="wrap">
             <div class="lb-grid">
-                <div class="lb-table-wrap">
+                <div class="lb-table-wrap" data-aos="fade-right" data-aos-duration="1000">
                     <span class="mono-label">Leaderboard</span>
                     <div class="lb-header">
                         <span>Rank</span>
@@ -286,7 +291,7 @@
                     <div class="lb-spacer"><span>&hellip;</span></div>
                     <div class="lb-row lb-row--you"><span class="lb-rank">??</span><span class="lb-name">YOU</span><span class="lb-score">&mdash;</span></div>
                 </div>
-                <div class="lb-notes">
+                <div class="lb-notes" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                     <h3>See where you stand<span class="gold">.</span></h3>
                     <span class="pill pill--small">Season 01</span>
                     <div class="lb-notes-list">
@@ -304,42 +309,43 @@
     <section class="section">
         <div class="wrap">
             <div class="section-intro">
-                <h2>A score only matters if the game is fair<span class="gold">.</span></h2>
+                <h2 data-aos="fade-up" data-aos-duration="800">A score only matters if the game is fair<span class="gold">.</span></h2>
             </div>
 
             <div class="cards-2x2">
-                <div class="card card--fair">
+                <div class="card card--fair" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
                     <h4>One problem. Same rules<span class="gold">.</span></h4>
                     <p>All players solve under the same defined conditions.</p>
                 </div>
-                <div class="card card--fair">
+                <div class="card card--fair" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
                     <h4>Defined time limits<span class="gold">.</span></h4>
                     <p>Every scored challenge has a time limit set before it starts.</p>
                 </div>
-                <div class="card card--fair">
+                <div class="card card--fair" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <h4>One attempt where it counts<span class="gold">.</span></h4>
                     <p>Competitive challenges are designed around a single attempt.</p>
                 </div>
-                <div class="card card--fair">
+                <div class="card card--fair" data-aos="fade-up" data-aos-duration="800" data-aos-delay="450">
                     <h4>Clear AI rules<span class="gold">.</span></h4>
                     <p>Every challenge states whether AI tools are allowed. In-person competitive rounds are solved without AI.</p>
                 </div>
             </div>
 
-            <p class="fair-note muted">Your real identity stays with the platform. On the leaderboard, you can compete under a nickname.</p>
-            <a href="#faq" class="text-link">See full competition rules &rarr;</a>
+            <p class="fair-note muted" data-aos="fade-up" data-aos-duration="600">Your real identity stays with the platform. On the leaderboard, you can compete under a nickname.</p>
+            <a href="#faq" class="text-link" data-aos="fade-up" data-aos-duration="600">See full competition rules &rarr;</a>
         </div>
     </section>
 
     <!-- Creator -->
     <section class="section">
+        <div class="section-gradient section-gradient--left"><img src="images/gradient-hero.png" alt=""></div>
         <div class="wrap">
             <div class="creator-block">
-                <h2>The best players don&rsquo;t just solve the game. They start shaping it<span class="gold">.</span></h2>
-                <p class="sub">The first challenges are created by people at Second Foundation. Over time, the strongest solvers can earn the opportunity to create problems for the people coming after them.</p>
-                <p class="creator-quote">Winning doesn&rsquo;t just move you up the leaderboard. It can give you influence over what happens next.</p>
+                <h2 data-aos="fade-up" data-aos-duration="800">The best players don&rsquo;t just solve the game. They start shaping it<span class="gold">.</span></h2>
+                <p class="sub" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">The first challenges are created by people at Second Foundation. Over time, the strongest solvers can earn the opportunity to create problems for the people coming after them.</p>
+                <p class="creator-quote" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">Winning doesn&rsquo;t just move you up the leaderboard. It can give you influence over what happens next.</p>
 
-                <div class="creator-path">
+                <div class="creator-path" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <span class="path-step">Solver</span>
                     <span class="path-arrow">&darr;</span>
                     <span class="path-step">Top solver</span>
@@ -356,39 +362,39 @@
     <section class="section" id="rewards">
         <div class="wrap">
             <div class="section-intro">
-                <h2>More than a leaderboard<span class="gold">.</span></h2>
-                <p class="sub">Solve your way into a network built around the same thing: difficult problems.</p>
+                <h2 data-aos="fade-up" data-aos-duration="800">More than a leaderboard<span class="gold">.</span></h2>
+                <p class="sub" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">Solve your way into a network built around the same thing: difficult problems.</p>
             </div>
 
             <div class="cards-3">
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
                     <span class="mono-label">Community</span>
                     <h4>Challenges</h4>
                     <p>Keep solving.</p>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                     <span class="mono-label">Community</span>
                     <h4>In-person competitions</h4>
                     <p>Meet people by competing with them.</p>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <span class="mono-label">Community</span>
                     <h4>Chess &amp; poker events</h4>
                     <p>Different games. Same instinct.</p>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                     <span class="mono-label">Community</span>
                     <h4>Expert feedback</h4>
                     <p>Selected solutions can receive deeper feedback.</p>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <span class="mono-label">Community</span>
                     <h4>Content &amp; discussions</h4>
                     <p>Go deeper into problems, approaches and solutions.</p>
                 </div>
             </div>
 
-            <p class="community-quote">You don&rsquo;t join by networking. You join by solving.</p>
+            <p class="community-quote" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">You don&rsquo;t join by networking. You join by solving.</p>
         </div>
     </section>
 
@@ -396,10 +402,10 @@
     <section class="section section--highlight">
         <div class="wrap">
             <div class="big-cta">
-                <h2 class="big-cta-title">One competition.<br>One leaderboard.<br>One way to San Francisco<span class="gold">.</span></h2>
-                <p class="sub">You don&rsquo;t enter a prize draw. You earn your way there.</p>
-                <a href="#waitlist" class="btn btn-primary">Join the waitlist</a>
-                <span class="muted">Start with the first challenge.</span>
+                <h2 class="big-cta-title" data-aos="fade-up" data-aos-duration="1000">One competition.<br>One leaderboard.<br>One way to San Francisco<span class="gold">.</span></h2>
+                <p class="sub" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">You don&rsquo;t enter a prize draw. You earn your way there.</p>
+                <a href="#waitlist" class="btn btn-primary btn-glow" data-aos="fade-up" data-aos-duration="800" data-aos-delay="350">Join the waitlist</a>
+                <span class="muted" data-aos="fade-up" data-aos-duration="600" data-aos-delay="450">Start with the first challenge.</span>
             </div>
         </div>
     </section>
@@ -408,7 +414,7 @@
     <section class="section">
         <div class="wrap">
             <div class="might-grid">
-                <div class="card might-yes">
+                <div class="card might-yes" data-aos="fade-right" data-aos-duration="800">
                     <h3>You might like this if&hellip;</h3>
                     <ul>
                         <li>Hard problems are the fun part.</li>
@@ -418,7 +424,7 @@
                         <li>Something means more when you have to earn it.</li>
                     </ul>
                 </div>
-                <div class="card might-no">
+                <div class="card might-no" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
                     <h3>You probably won&rsquo;t if&hellip;</h3>
                     <ul>
                         <li>You&rsquo;re looking for an easy online quiz.</li>
@@ -435,10 +441,10 @@
     <section class="section">
         <div class="wrap">
             <div class="about-grid">
-                <div class="about-logo-area">
+                <div class="about-logo-area" data-aos="fade-right" data-aos-duration="800">
                     <img src="images/logo-mobile.svg" alt="Second Foundation" class="about-logo">
                 </div>
-                <div class="about-text">
+                <div class="about-text" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
                     <h2>Built by people who like these problems too<span class="gold">.</span></h2>
                     <p class="sub">The first challenges are created by people at Second Foundation &mdash; a technology company working with mathematics, software, data and complex systems.</p>
                     <p class="sub">The competition is built as a standalone platform. You don&rsquo;t need to be interested in working at Second Foundation to participate.</p>
@@ -450,11 +456,12 @@
 
     <!-- FAQ -->
     <section class="section" id="faq">
+        <div class="section-gradient section-gradient--right"><img src="images/gradient-footer.png" alt=""></div>
         <div class="wrap">
             <div class="section-intro">
-                <h2>Frequently asked questions<span class="gold">.</span></h2>
+                <h2 data-aos="fade-up" data-aos-duration="800">Frequently asked questions<span class="gold">.</span></h2>
             </div>
-            <div class="faq-list">
+            <div class="faq-list" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                 <details class="faq-item">
                     <summary>When does the competition start?</summary>
                     <p>The competition launches with Season 01. Join the waitlist and we&rsquo;ll send you the entry challenge as soon as it goes live.</p>
@@ -507,14 +514,14 @@
     <section class="section section--highlight" id="waitlist">
         <div class="wrap">
             <div class="waitlist-block">
-                <h2>The first challenge is coming<span class="gold">.</span></h2>
-                <p class="sub">Join the waitlist and we&rsquo;ll send it to you when it goes live.</p>
+                <h2 data-aos="fade-up" data-aos-duration="800">The first challenge is coming<span class="gold">.</span></h2>
+                <p class="sub" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">Join the waitlist and we&rsquo;ll send it to you when it goes live.</p>
 
-                <form class="waitlist-form" id="waitlistForm">
+                <form class="waitlist-form" id="waitlistForm" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <div class="form-row">
                         <input type="text" name="name" placeholder="Your name" required>
                         <input type="email" name="email" placeholder="Your email" required>
-                        <button type="submit" class="btn btn-primary">Join the waitlist</button>
+                        <button type="submit" class="btn btn-primary btn-glow">Join the waitlist</button>
                     </div>
                     <label class="form-check">
                         <input type="checkbox" name="gdpr" required>
@@ -527,7 +534,7 @@
                     <p>We&rsquo;ll send you the first challenge when it goes live.</p>
                 </div>
 
-                <div class="waitlist-info">
+                <div class="waitlist-info" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
                     <p>Solve the first problem. Enter the competition. See how far you can get.</p>
                     <p><strong>Main prize:</strong> conference ticket + flights to San Francisco.</p>
                     <p class="muted-small">No spam. We&rsquo;ll contact you about the launch and the competition.</p>
@@ -538,6 +545,7 @@
 
     <!-- Footer -->
     <footer class="footer">
+        <div class="footer-gradient"><img src="images/gradient-footer.png" alt=""></div>
         <div class="wrap footer-inner">
             <div class="footer-brand">
                 <img src="images/logo.svg" alt="Second Foundation" class="footer-logo">
@@ -550,6 +558,8 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.12.0/tsparticles.slim.bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
