@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Problem-Solving Competition | Second Foundation</title>
-    <meta name="description" content="A competition for people who like hard problems. Solve challenges, earn points, compete on the leaderboard. Win a trip to San Francisco.">
+    <title>Problem-Solving Competition &mdash; Second Foundation</title>
+    <meta name="description" content="A competition for people who like hard problems. Solve challenges, earn points, climb the seasonal leaderboard and compete for a trip to San Francisco.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230f121a'/%3E%3Cpath d='M8 6h4v20H8zM20 6h4v20h-4zM8 6h16v4H8z' fill='white'/%3E%3C/svg%3E">
 </head>
 <body>
 
+    <!-- Gradient Overlays -->
+    <div class="bg-gradient bg-gradient-left"></div>
+    <div class="bg-gradient bg-gradient-right"></div>
+
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <svg class="logo-icon" viewBox="0 0 40 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="4" y="0" width="6" height="52" fill="currentColor"/>
-                    <rect x="30" y="0" width="6" height="52" fill="currentColor"/>
-                    <rect x="0" y="0" width="40" height="6" fill="currentColor"/>
-                    <rect x="10" y="0" width="4" height="6" fill="currentColor"/>
-                    <rect x="26" y="0" width="4" height="6" fill="currentColor"/>
-                </svg>
-                <span class="logo-text">Second Foundation</span>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-brand">
+                <img src="images/logo-mobile.svg" alt="Second Foundation" class="nav-logo-icon">
+                <span class="nav-label-group">
+                    <span class="nav-name">Competition</span>
+                    <span class="nav-by">by Second Foundation</span>
+                </span>
             </a>
             <div class="nav-links" id="navLinks">
                 <a href="#how-it-works">How it works</a>
@@ -32,166 +33,128 @@
                 <a href="#rewards">Rewards</a>
                 <a href="#faq">FAQ</a>
             </div>
-            <a href="#waitlist" class="nav-cta">Join the waitlist</a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
+            <a href="#waitlist" class="btn btn-nav">Join the waitlist</a>
+            <button class="nav-burger" id="navBurger" aria-label="Menu">
+                <span></span><span></span>
             </button>
         </div>
     </nav>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="#how-it-works">How it works</a>
-        <a href="#competition">The competition</a>
-        <a href="#rewards">Rewards</a>
-        <a href="#faq">FAQ</a>
-        <a href="#waitlist" class="mobile-cta">Join the waitlist</a>
+    <div class="mobile-overlay" id="mobileOverlay">
+        <div class="mobile-nav">
+            <a href="#how-it-works">How it works</a>
+            <a href="#competition">The competition</a>
+            <a href="#rewards">Rewards</a>
+            <a href="#faq">FAQ</a>
+            <a href="#waitlist" class="btn btn-nav" style="margin-top:12px;">Join the waitlist</a>
+        </div>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-glow hero-glow-1"></div>
-        <div class="hero-glow hero-glow-2"></div>
-        <div class="hero-glow hero-glow-3"></div>
-        <div class="container">
-            <div class="hero-content">
-                <p class="hero-label">Season 01 &mdash; by Second Foundation</p>
-                <h1 class="hero-title">A competition for people who like hard problems<span class="dot">.</span></h1>
-                <p class="hero-subtitle">Solve challenges. Earn points. See how you compare. Make it far enough and you could win a conference trip to San Francisco.</p>
-                <a href="#waitlist" class="btn btn-primary">Join the waitlist</a>
-                <p class="hero-note">Be among the first to receive the entry challenge.</p>
-            </div>
-            <div class="hero-flow">
-                <div class="flow-step">
-                    <span class="flow-label">Solve</span>
-                    <span class="flow-arrow">&rarr;</span>
+    <!-- Hero -->
+    <section class="section hero" id="hero">
+        <div class="wrap">
+            <div class="hero-grid">
+                <div class="hero-left">
+                    <h1>A competition for people who like hard problems<span class="gold">.</span></h1>
+                    <p class="hero-sub">Solve challenges. Earn points. See how you compare. Make it far enough and you could win a conference trip to San Francisco.</p>
+                    <div class="hero-actions">
+                        <a href="#waitlist" class="btn btn-primary">Join the waitlist</a>
+                    </div>
+                    <p class="hero-note">Be among the first to receive the entry challenge.</p>
+
+                    <div class="hero-flow">
+                        <div class="flow-item">Solve</div>
+                        <span class="flow-sep">&rarr;</span>
+                        <div class="flow-item">Score</div>
+                        <span class="flow-sep">&rarr;</span>
+                        <div class="flow-item">Compete</div>
+                        <span class="flow-sep">&rarr;</span>
+                        <div class="flow-item flow-item--gold">San Francisco</div>
+                    </div>
+
+                    <div class="hero-meta">
+                        <img src="images/logo-mobile.svg" alt="" class="hero-meta-logo">
+                        <span class="mono-label">Season 01</span>
+                    </div>
                 </div>
-                <div class="flow-step">
-                    <span class="flow-label">Score</span>
-                    <span class="flow-arrow">&rarr;</span>
-                </div>
-                <div class="flow-step">
-                    <span class="flow-label">Compete</span>
-                    <span class="flow-arrow">&rarr;</span>
-                </div>
-                <div class="flow-step flow-step-highlight">
-                    <span class="flow-label">San Francisco</span>
+                <div class="hero-right">
+                    <div class="widget">
+                        <span class="mono-label">Competition status</span>
+                        <div class="widget-rows">
+                            <div class="widget-row">
+                                <span class="widget-key">Player</span>
+                                <span class="widget-val">you</span>
+                            </div>
+                            <div class="widget-row">
+                                <span class="widget-key">Score</span>
+                                <span class="widget-val">&mdash;</span>
+                            </div>
+                            <div class="widget-row">
+                                <span class="widget-key">Rank</span>
+                                <span class="widget-val">&mdash;</span>
+                            </div>
+                            <div class="widget-row">
+                                <span class="widget-key">Next challenge</span>
+                                <span class="widget-val">Coming soon</span>
+                            </div>
+                        </div>
+                        <div class="widget-placeholder">
+                            <span class="mono-label">Competition UI</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Prize Section -->
-    <section class="section prize-section" id="prize">
-        <div class="container">
-            <div class="section-header">
-                <h2>Solve your way to San Francisco<span class="dot">.</span></h2>
-                <p class="section-subtitle">The strongest performance in the competition leads to the main prize.</p>
+    <!-- Prize -->
+    <section class="section" id="prize">
+        <div class="wrap">
+            <div class="big-statement">
+                <h2>Solve your way to San Francisco<span class="gold">.</span></h2>
+                <p class="sub">The strongest performance in the competition leads to the main prize.</p>
             </div>
-            <div class="prize-card">
-                <div class="prize-card-inner">
-                    <div class="prize-icon">
-                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="32" cy="24" r="16" stroke="currentColor" stroke-width="2"/>
-                            <path d="M24 40h16l4 20H20l4-20z" stroke="currentColor" stroke-width="2"/>
-                            <path d="M26 24l6-8 6 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h3>San Francisco</h3>
-                    <p>Conference ticket + flights for the winner.</p>
-                </div>
+
+            <div class="prize-highlight">
+                <h3>San Francisco</h3>
+                <p>Conference ticket + flights for the winner.</p>
             </div>
-            <div class="reward-path">
-                <div class="path-item">First challenge</div>
-                <div class="path-connector"></div>
-                <div class="path-item">Points</div>
-                <div class="path-connector"></div>
-                <div class="path-item">Leaderboard</div>
-                <div class="path-connector"></div>
-                <div class="path-item">In-person rounds</div>
-                <div class="path-connector"></div>
-                <div class="path-item">Final stages</div>
-                <div class="path-connector"></div>
-                <div class="path-item path-item-highlight">San Francisco</div>
+
+            <div class="section-divider-top"></div>
+            <p class="sub-label">And there&rsquo;s more to earn along the way.</p>
+            <div class="reward-pills">
+                <span class="pill">Expert feedback</span>
+                <span class="pill">Special events</span>
+                <span class="pill">Chess &amp; poker days</span>
+                <span class="pill">Badges and reputation</span>
+                <span class="pill">Exclusive content</span>
+                <span class="pill">Access to the solver network</span>
             </div>
         </div>
     </section>
 
-    <!-- Rewards Section -->
-    <section class="section rewards-section" id="rewards">
-        <div class="container">
-            <div class="section-header">
-                <h2>And there's more to earn along the way<span class="dot">.</span></h2>
+    <!-- How It Works -->
+    <section class="section" id="how-it-works">
+        <div class="wrap">
+            <div class="section-intro">
+                <h2>A challenge for people who like hard problems<span class="gold">.</span></h2>
+                <p class="sub">This isn&rsquo;t a single online quiz. It&rsquo;s an ongoing competition built around solving problems, earning points and progressing through increasingly difficult challenges.</p>
             </div>
-            <div class="rewards-grid">
-                <div class="reward-card">
-                    <div class="reward-icon">
-                        <svg viewBox="0 0 32 32" fill="none"><path d="M16 4l3 9h9l-7 5 3 9-8-6-8 6 3-9-7-5h9z" stroke="currentColor" stroke-width="1.5"/></svg>
-                    </div>
-                    <h4>Expert feedback</h4>
-                    <p>Selected solutions can receive deeper feedback from experts.</p>
-                </div>
-                <div class="reward-card">
-                    <div class="reward-icon">
-                        <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M16 8v8l5 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                    </div>
-                    <h4>Special events</h4>
-                    <p>Exclusive invitations to curated events and gatherings.</p>
-                </div>
-                <div class="reward-card">
-                    <div class="reward-icon">
-                        <svg viewBox="0 0 32 32" fill="none"><rect x="6" y="6" width="20" height="20" rx="2" stroke="currentColor" stroke-width="1.5"/><circle cx="11" cy="11" r="2" fill="currentColor"/><circle cx="21" cy="21" r="2" fill="currentColor"/></svg>
-                    </div>
-                    <h4>Chess & poker days</h4>
-                    <p>Different games. Same instinct. Compete beyond the challenges.</p>
-                </div>
-                <div class="reward-card">
-                    <div class="reward-icon">
-                        <svg viewBox="0 0 32 32" fill="none"><path d="M16 4l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z" stroke="currentColor" stroke-width="1.5"/><path d="M8 24h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                    </div>
-                    <h4>Badges and reputation</h4>
-                    <p>Build your solver profile across seasons.</p>
-                </div>
-                <div class="reward-card">
-                    <div class="reward-icon">
-                        <svg viewBox="0 0 32 32" fill="none"><rect x="6" y="8" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M10 14h12M10 18h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                    </div>
-                    <h4>Exclusive content</h4>
-                    <p>Go deeper into problems, approaches and solutions.</p>
-                </div>
-                <div class="reward-card">
-                    <div class="reward-icon">
-                        <svg viewBox="0 0 32 32" fill="none"><circle cx="12" cy="14" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="22" cy="14" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M6 26c0-4 3-6 6-6h8c3 0 6 2 6 6" stroke="currentColor" stroke-width="1.5"/></svg>
-                    </div>
-                    <h4>Access to the solver network</h4>
-                    <p>Connect with people who enjoy the same kind of problems.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- How It Works Section -->
-    <section class="section how-section" id="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <h2>A challenge for people who like hard problems<span class="dot">.</span></h2>
-                <p class="section-subtitle">This isn't a single online quiz. It's an ongoing competition built around solving problems, earning points and progressing through increasingly difficult challenges.</p>
-            </div>
             <div class="pillars">
-                <div class="pillar">
-                    <span class="pillar-number">01</span>
+                <div class="pillar-item">
+                    <span class="mono-label">01</span>
                     <h3>Solve</h3>
                     <p>Take on problems designed to test how you think and how well you can find a way through.</p>
                 </div>
-                <div class="pillar">
-                    <span class="pillar-number">02</span>
+                <div class="pillar-item">
+                    <span class="mono-label">02</span>
                     <h3>Score</h3>
                     <p>Complete scored challenges and collect points.</p>
                 </div>
-                <div class="pillar">
-                    <span class="pillar-number">03</span>
+                <div class="pillar-item">
+                    <span class="mono-label">03</span>
                     <h3>Compare</h3>
                     <p>See where you stand on the seasonal leaderboard.</p>
                 </div>
@@ -199,101 +162,75 @@
         </div>
     </section>
 
-    <!-- Journey Section -->
-    <section class="section journey-section" id="journey">
-        <div class="container">
-            <div class="section-header">
-                <h2>Your path through the competition<span class="dot">.</span></h2>
-            </div>
-            <div class="journey-timeline">
-                <div class="journey-step">
-                    <div class="step-marker">
-                        <span class="step-number">01</span>
-                    </div>
-                    <div class="step-content">
-                        <h4>Join the waitlist</h4>
-                        <p>We'll send you the first challenge when it launches.</p>
-                    </div>
+    <!-- Journey -->
+    <section class="section" id="journey">
+        <div class="wrap">
+            <div class="steps-list">
+                <div class="step-row">
+                    <span class="mono-label step-num">01</span>
+                    <h4>Join the waitlist</h4>
+                    <p>We&rsquo;ll send you the first challenge when it launches.</p>
                 </div>
-                <div class="journey-step">
-                    <div class="step-marker">
-                        <span class="step-number">02</span>
-                    </div>
-                    <div class="step-content">
-                        <h4>Solve the entry challenge</h4>
-                        <p>Your first problem is your way into the competition.</p>
-                    </div>
+                <div class="step-row">
+                    <span class="mono-label step-num">02</span>
+                    <h4>Solve the entry challenge</h4>
+                    <p>Your first problem is your way into the competition.</p>
                 </div>
-                <div class="journey-step">
-                    <div class="step-marker">
-                        <span class="step-number">03</span>
-                    </div>
-                    <div class="step-content">
-                        <h4>Enter the game</h4>
-                        <p>If you solve it, register your score and choose the nickname you'll compete under.</p>
-                    </div>
+                <div class="step-row">
+                    <span class="mono-label step-num">03</span>
+                    <h4>Enter the game</h4>
+                    <p>If you solve it, register your score and choose the nickname you&rsquo;ll compete under.</p>
                 </div>
-                <div class="journey-step">
-                    <div class="step-marker">
-                        <span class="step-number">04</span>
-                    </div>
-                    <div class="step-content">
-                        <h4>Solve & score</h4>
-                        <p>Take on online challenges and regular in-person competitions.</p>
-                    </div>
+                <div class="step-row">
+                    <span class="mono-label step-num">04</span>
+                    <h4>Solve &amp; score</h4>
+                    <p>Take on online challenges and regular in-person competitions.</p>
                 </div>
-                <div class="journey-step">
-                    <div class="step-marker">
-                        <span class="step-number">05</span>
-                    </div>
-                    <div class="step-content">
-                        <h4>Move up</h4>
-                        <p>Every scored challenge can move you higher on the seasonal leaderboard.</p>
-                    </div>
+                <div class="step-row">
+                    <span class="mono-label step-num">05</span>
+                    <h4>Move up</h4>
+                    <p>Every scored challenge can move you higher on the seasonal leaderboard.</p>
                 </div>
-                <div class="journey-step">
-                    <div class="step-marker">
-                        <span class="step-number">06</span>
-                    </div>
-                    <div class="step-content">
-                        <h4>Unlock more</h4>
-                        <p>Build your reputation and gain access to more challenges, content and events.</p>
-                    </div>
+                <div class="step-row">
+                    <span class="mono-label step-num">06</span>
+                    <h4>Unlock more</h4>
+                    <p>Build your reputation and gain access to more challenges, content and events.</p>
                 </div>
-                <div class="journey-step">
-                    <div class="step-marker">
-                        <span class="step-number">07</span>
-                    </div>
-                    <div class="step-content">
-                        <h4>Compete for the main prize</h4>
-                        <p>The strongest solvers make their way towards the final stages &mdash; and San Francisco.</p>
-                    </div>
+                <div class="step-row">
+                    <span class="mono-label step-num">07</span>
+                    <h4>Compete for the main prize</h4>
+                    <p>The strongest solvers make their way towards the final stages &mdash; and San Francisco.</p>
                 </div>
             </div>
-            <div class="journey-cta">
+            <div class="section-cta">
                 <a href="#waitlist" class="btn btn-primary">Join the waitlist</a>
-                <p>Get the entry challenge when it goes live.</p>
+                <span class="muted">Get the entry challenge when it goes live.</span>
             </div>
         </div>
     </section>
 
-    <!-- Profile Section -->
-    <section class="section profile-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>If this sounds like fun, this was built for you<span class="dot">.</span></h2>
+    <!-- For You -->
+    <section class="section">
+        <div class="wrap">
+            <div class="split-intro">
+                <h2>If this sounds like fun, this was built for you<span class="gold">.</span></h2>
+                <p class="sub split-intro-sub">Problems without obvious answers. Strong competition. Real stakes &mdash; points, progression, earned rewards, and a path to San Francisco.</p>
             </div>
-            <div class="profile-grid">
-                <div class="profile-card">
-                    <h4>Hard problems<span class="dot">.</span></h4>
+
+            <div class="cards-3">
+                <div class="card">
+                    <span class="mono-label">Feature</span>
+                    <h4>Hard problems<span class="gold">.</span></h4>
                     <p>Problems without obvious answers. The kind that make you stop, think and try another way.</p>
                 </div>
-                <div class="profile-card">
-                    <h4>Strong competition<span class="dot">.</span></h4>
-                    <p>A score becomes interesting when you're comparing it with people who are good too.</p>
+                <div class="card">
+                    <span class="mono-label">Feature</span>
+                    <h4>Strong competition<span class="gold">.</span></h4>
+                    <p>A score becomes interesting when you&rsquo;re comparing it with people who are good too.</p>
                 </div>
-                <div class="profile-card">
-                    <h4>Real stakes<span class="dot">.</span></h4>
+                <div class="card">
+                    <span class="mono-label">Feature</span>
+                    <h4>Real stakes<span class="gold">.</span></h4>
                     <p>Points. Progression. Earned rewards. And a path to San Francisco.</p>
                 </div>
             </div>
@@ -301,193 +238,177 @@
     </section>
 
     <!-- Competition Tiers -->
-    <section class="section tiers-section" id="competition">
-        <div class="container">
-            <div class="section-header">
-                <h2>The problems get harder. So do the stakes<span class="dot">.</span></h2>
+    <section class="section" id="competition">
+        <div class="wrap">
+            <div class="section-intro">
+                <h2>The problems get harder. So do the stakes<span class="gold">.</span></h2>
             </div>
-            <div class="tiers-grid">
-                <div class="tier-card">
-                    <div class="tier-level">Level 1</div>
-                    <h3>Online challenges</h3>
+
+            <div class="cards-3 cards-3--tiers">
+                <div class="card card--tier">
+                    <span class="mono-label">Level 1</span>
+                    <h4>Online challenges</h4>
                     <p>Shorter problems. Limited time. Earn points throughout the season.</p>
                 </div>
-                <div class="tier-card tier-card-featured">
-                    <div class="tier-level">Level 2</div>
-                    <h3>In-person rounds</h3>
+                <div class="card card--tier card--featured">
+                    <span class="mono-label">Level 2</span>
+                    <h4>In-person rounds</h4>
                     <p>Bigger problems. More time. One attempt. No AI.</p>
                 </div>
-                <div class="tier-card">
-                    <div class="tier-level">Level 3</div>
-                    <h3>Final stages</h3>
+                <div class="card card--tier">
+                    <span class="mono-label">Level 3</span>
+                    <h4>Final stages</h4>
                     <p>The strongest solvers face the most demanding challenges &mdash; and compete for the biggest rewards.</p>
                 </div>
             </div>
-            <p class="tiers-note">Easy to understand. Increasingly hard to master.</p>
+            <p class="tiers-note muted">Easy to understand. Increasingly hard to master.</p>
         </div>
     </section>
 
-    <!-- Leaderboard Section -->
-    <section class="section leaderboard-section">
-        <div class="container">
-            <div class="leaderboard-layout">
-                <div class="leaderboard-info">
-                    <h2>See where you stand<span class="dot">.</span></h2>
-                    <p class="season-badge">Season 01</p>
-                    <ul class="leaderboard-notes">
-                        <li>Every scored challenge adds points.</li>
-                        <li>Your seasonal score determines your position.</li>
-                        <li>Your long-term reputation continues across seasons.</li>
-                        <li>Compete publicly under a nickname.</li>
-                    </ul>
+    <!-- Leaderboard -->
+    <section class="section" id="leaderboard">
+        <div class="wrap">
+            <div class="lb-grid">
+                <div class="lb-table-wrap">
+                    <span class="mono-label">Leaderboard</span>
+                    <div class="lb-header">
+                        <span>Rank</span>
+                        <span>Player</span>
+                        <span>Score</span>
+                    </div>
+                    <div class="lb-body">
+                        <div class="lb-row"><span class="lb-rank">01</span><span class="lb-name">solver_41</span><span class="lb-score">4,820</span></div>
+                        <div class="lb-row"><span class="lb-rank">02</span><span class="lb-name">hidden</span><span class="lb-score">4,440</span></div>
+                        <div class="lb-row"><span class="lb-rank">03</span><span class="lb-name">vector_x</span><span class="lb-score">3,960</span></div>
+                        <div class="lb-row"><span class="lb-rank">04</span><span class="lb-name">anonymous</span><span class="lb-score">3,710</span></div>
+                        <div class="lb-row"><span class="lb-rank">05</span><span class="lb-name">solver_09</span><span class="lb-score">3,520</span></div>
+                    </div>
+                    <div class="lb-spacer"><span>&hellip;</span></div>
+                    <div class="lb-row lb-row--you"><span class="lb-rank">??</span><span class="lb-name">YOU</span><span class="lb-score">&mdash;</span></div>
                 </div>
-                <div class="leaderboard-table">
-                    <div class="lb-row lb-header">
-                        <span class="lb-rank">#</span>
-                        <span class="lb-name">Player</span>
-                        <span class="lb-score">Score</span>
-                    </div>
-                    <div class="lb-row">
-                        <span class="lb-rank">01</span>
-                        <span class="lb-name">solver_41</span>
-                        <span class="lb-score">4,820</span>
-                    </div>
-                    <div class="lb-row">
-                        <span class="lb-rank">02</span>
-                        <span class="lb-name">hidden</span>
-                        <span class="lb-score">4,440</span>
-                    </div>
-                    <div class="lb-row">
-                        <span class="lb-rank">03</span>
-                        <span class="lb-name">vector_x</span>
-                        <span class="lb-score">3,960</span>
-                    </div>
-                    <div class="lb-row">
-                        <span class="lb-rank">04</span>
-                        <span class="lb-name">anonymous</span>
-                        <span class="lb-score">3,710</span>
-                    </div>
-                    <div class="lb-row">
-                        <span class="lb-rank">05</span>
-                        <span class="lb-name">solver_09</span>
-                        <span class="lb-score">3,520</span>
-                    </div>
-                    <div class="lb-row lb-row-you">
-                        <span class="lb-rank">??</span>
-                        <span class="lb-name">YOU</span>
-                        <span class="lb-score">&mdash;</span>
+                <div class="lb-notes">
+                    <h3>See where you stand<span class="gold">.</span></h3>
+                    <span class="pill pill--small">Season 01</span>
+                    <div class="lb-notes-list">
+                        <p>Every scored challenge adds points.</p>
+                        <p>Your seasonal score determines your position.</p>
+                        <p>Your long-term reputation continues across seasons.</p>
+                        <p>Compete publicly under a nickname.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Fairness Section -->
-    <section class="section fairness-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>A score only matters if the game is fair<span class="dot">.</span></h2>
+    <!-- Fairness -->
+    <section class="section">
+        <div class="wrap">
+            <div class="section-intro">
+                <h2>A score only matters if the game is fair<span class="gold">.</span></h2>
             </div>
-            <div class="fairness-grid">
-                <div class="fairness-card">
-                    <h4>One problem. Same rules<span class="dot">.</span></h4>
+
+            <div class="cards-2x2">
+                <div class="card card--fair">
+                    <h4>One problem. Same rules<span class="gold">.</span></h4>
                     <p>All players solve under the same defined conditions.</p>
                 </div>
-                <div class="fairness-card">
-                    <h4>Defined time limits<span class="dot">.</span></h4>
+                <div class="card card--fair">
+                    <h4>Defined time limits<span class="gold">.</span></h4>
                     <p>Every scored challenge has a time limit set before it starts.</p>
                 </div>
-                <div class="fairness-card">
-                    <h4>One attempt where it counts<span class="dot">.</span></h4>
+                <div class="card card--fair">
+                    <h4>One attempt where it counts<span class="gold">.</span></h4>
                     <p>Competitive challenges are designed around a single attempt.</p>
                 </div>
-                <div class="fairness-card">
-                    <h4>Clear AI rules<span class="dot">.</span></h4>
+                <div class="card card--fair">
+                    <h4>Clear AI rules<span class="gold">.</span></h4>
                     <p>Every challenge states whether AI tools are allowed. In-person competitive rounds are solved without AI.</p>
                 </div>
             </div>
-            <p class="fairness-note">Your real identity stays with the platform. On the leaderboard, you can compete under a nickname.</p>
+
+            <p class="fair-note muted">Your real identity stays with the platform. On the leaderboard, you can compete under a nickname.</p>
+            <a href="#faq" class="text-link">See full competition rules &rarr;</a>
         </div>
     </section>
 
-    <!-- Creator Section -->
-    <section class="section creator-section">
-        <div class="container">
-            <div class="creator-layout">
-                <div class="creator-text">
-                    <h2>The best players don't just solve the game. They start shaping it<span class="dot">.</span></h2>
-                    <p>The first challenges are created by people at Second Foundation. Over time, the strongest solvers can earn the opportunity to create problems for the people coming after them.</p>
-                    <p class="creator-quote">Winning doesn't just move you up the leaderboard. It can give you influence over what happens next.</p>
-                </div>
+    <!-- Creator -->
+    <section class="section">
+        <div class="wrap">
+            <div class="creator-block">
+                <h2>The best players don&rsquo;t just solve the game. They start shaping it<span class="gold">.</span></h2>
+                <p class="sub">The first challenges are created by people at Second Foundation. Over time, the strongest solvers can earn the opportunity to create problems for the people coming after them.</p>
+                <p class="creator-quote">Winning doesn&rsquo;t just move you up the leaderboard. It can give you influence over what happens next.</p>
+
                 <div class="creator-path">
-                    <div class="creator-step">Solver</div>
-                    <div class="creator-arrow">
-                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                    </div>
-                    <div class="creator-step">Top solver</div>
-                    <div class="creator-arrow">
-                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                    </div>
-                    <div class="creator-step">Winner</div>
-                    <div class="creator-arrow">
-                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                    </div>
-                    <div class="creator-step creator-step-highlight">Challenge creator</div>
+                    <span class="path-step">Solver</span>
+                    <span class="path-arrow">&darr;</span>
+                    <span class="path-step">Top solver</span>
+                    <span class="path-arrow">&darr;</span>
+                    <span class="path-step">Winner</span>
+                    <span class="path-arrow">&darr;</span>
+                    <span class="path-step path-step--gold">Challenge creator</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Community Section -->
-    <section class="section community-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>More than a leaderboard<span class="dot">.</span></h2>
-                <p class="section-subtitle">Solve your way into a network built around the same thing: difficult problems.</p>
+    <!-- Community -->
+    <section class="section" id="rewards">
+        <div class="wrap">
+            <div class="section-intro">
+                <h2>More than a leaderboard<span class="gold">.</span></h2>
+                <p class="sub">Solve your way into a network built around the same thing: difficult problems.</p>
             </div>
-            <div class="community-grid">
-                <div class="community-card">
+
+            <div class="cards-3">
+                <div class="card">
+                    <span class="mono-label">Community</span>
                     <h4>Challenges</h4>
                     <p>Keep solving.</p>
                 </div>
-                <div class="community-card">
+                <div class="card">
+                    <span class="mono-label">Community</span>
                     <h4>In-person competitions</h4>
                     <p>Meet people by competing with them.</p>
                 </div>
-                <div class="community-card">
-                    <h4>Chess & poker events</h4>
+                <div class="card">
+                    <span class="mono-label">Community</span>
+                    <h4>Chess &amp; poker events</h4>
                     <p>Different games. Same instinct.</p>
                 </div>
-                <div class="community-card">
+                <div class="card">
+                    <span class="mono-label">Community</span>
                     <h4>Expert feedback</h4>
                     <p>Selected solutions can receive deeper feedback.</p>
                 </div>
-                <div class="community-card community-card-wide">
-                    <h4>Content & discussions</h4>
+                <div class="card">
+                    <span class="mono-label">Community</span>
+                    <h4>Content &amp; discussions</h4>
                     <p>Go deeper into problems, approaches and solutions.</p>
                 </div>
             </div>
-            <p class="community-note">You don't join by networking. You join by solving.</p>
+
+            <p class="community-quote">You don&rsquo;t join by networking. You join by solving.</p>
         </div>
     </section>
 
-    <!-- Final Prize CTA -->
-    <section class="section final-prize-section">
-        <div class="container">
-            <div class="final-prize-content">
-                <h2>One competition. One leaderboard. One way to San Francisco<span class="dot">.</span></h2>
-                <p class="final-prize-subtitle">You don't enter a prize draw. You earn your way there.</p>
-                <a href="#waitlist" class="btn btn-primary btn-large">Join the waitlist</a>
-                <p class="final-prize-note">Start with the first challenge.</p>
+    <!-- Big CTA -->
+    <section class="section section--highlight">
+        <div class="wrap">
+            <div class="big-cta">
+                <h2 class="big-cta-title">One competition.<br>One leaderboard.<br>One way to San Francisco<span class="gold">.</span></h2>
+                <p class="sub">You don&rsquo;t enter a prize draw. You earn your way there.</p>
+                <a href="#waitlist" class="btn btn-primary">Join the waitlist</a>
+                <span class="muted">Start with the first challenge.</span>
             </div>
         </div>
     </section>
 
-    <!-- You Might Like This -->
-    <section class="section might-section">
-        <div class="container">
+    <!-- You Might Like -->
+    <section class="section">
+        <div class="wrap">
             <div class="might-grid">
-                <div class="might-card might-yes">
+                <div class="card might-yes">
                     <h3>You might like this if&hellip;</h3>
                     <ul>
                         <li>Hard problems are the fun part.</li>
@@ -497,12 +418,12 @@
                         <li>Something means more when you have to earn it.</li>
                     </ul>
                 </div>
-                <div class="might-card might-no">
-                    <h3>You probably won't if&hellip;</h3>
+                <div class="card might-no">
+                    <h3>You probably won&rsquo;t if&hellip;</h3>
                     <ul>
-                        <li>You're looking for an easy online quiz.</li>
+                        <li>You&rsquo;re looking for an easy online quiz.</li>
                         <li>You expect points just for participating.</li>
-                        <li>You don't want your solution compared with others.</li>
+                        <li>You don&rsquo;t want your solution compared with others.</li>
                         <li>You prefer challenges where the answer is obvious.</li>
                     </ul>
                 </div>
@@ -510,157 +431,106 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="section about-section">
-        <div class="container">
-            <div class="about-content">
-                <h2>Built by people who like these problems too<span class="dot">.</span></h2>
-                <p>The first challenges are created by people at Second Foundation &mdash; a technology company working with mathematics, software, data and complex systems.</p>
-                <p>The competition is built as a standalone platform. You don't need to be interested in working at Second Foundation to participate.</p>
-                <a href="https://www.second-foundation.eu" target="_blank" rel="noopener" class="btn btn-outline">About Second Foundation &rarr;</a>
+    <!-- About -->
+    <section class="section">
+        <div class="wrap">
+            <div class="about-grid">
+                <div class="about-logo-area">
+                    <img src="images/logo-mobile.svg" alt="Second Foundation" class="about-logo">
+                </div>
+                <div class="about-text">
+                    <h2>Built by people who like these problems too<span class="gold">.</span></h2>
+                    <p class="sub">The first challenges are created by people at Second Foundation &mdash; a technology company working with mathematics, software, data and complex systems.</p>
+                    <p class="sub">The competition is built as a standalone platform. You don&rsquo;t need to be interested in working at Second Foundation to participate.</p>
+                    <a href="https://www.second-foundation.eu" target="_blank" rel="noopener" class="text-link">About Second Foundation &rarr;</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="section faq-section" id="faq">
-        <div class="container">
-            <div class="section-header">
-                <h2>Frequently asked questions<span class="dot">.</span></h2>
+    <!-- FAQ -->
+    <section class="section" id="faq">
+        <div class="wrap">
+            <div class="section-intro">
+                <h2>Frequently asked questions<span class="gold">.</span></h2>
             </div>
             <div class="faq-list">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>When does the competition start?</span>
-                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>The competition launches with Season 01. Join the waitlist and we'll send you the entry challenge as soon as it goes live.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Who can participate?</span>
-                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Anyone who can solve the entry challenge. There are no prerequisites beyond that &mdash; your solution is your application.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Is participation free?</span>
-                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes. There is no fee to participate. The competition is organized and funded by Second Foundation.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How long does a challenge take?</span>
-                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>It depends on the challenge. Online challenges tend to be shorter with strict time limits. In-person rounds allow more time for deeper problems.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How does scoring work?</span>
-                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Each scored challenge awards points based on performance. Your seasonal total determines your leaderboard position. Details are shared with each challenge.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Can I participate under a nickname?</span>
-                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes. Your real identity stays with the platform. On the leaderboard, you compete under a nickname of your choice.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Can I use AI?</span>
-                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Every challenge clearly states whether AI tools are allowed. In-person competitive rounds are solved without AI.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Do I need to attend in-person rounds?</span>
-                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Online challenges can be solved remotely. Some later stages of the competition include in-person rounds for those who progress far enough.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What exactly can I win?</span>
-                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>The main prize is a conference trip to San Francisco, including a ticket and flights. Along the way, you can earn badges, reputation, access to events, expert feedback, and more.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Who creates the challenges?</span>
-                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>The first challenges are created by Second Foundation. Over time, top solvers may earn the opportunity to create challenges themselves.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Is this a recruitment process?</span>
-                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>No. The competition is a standalone platform. You don't need to be interested in working at Second Foundation to participate.</p>
-                    </div>
-                </div>
+                <details class="faq-item">
+                    <summary>When does the competition start?</summary>
+                    <p>The competition launches with Season 01. Join the waitlist and we&rsquo;ll send you the entry challenge as soon as it goes live.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Who can participate?</summary>
+                    <p>Anyone who can solve the entry challenge. There are no prerequisites beyond that &mdash; your solution is your application.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Is participation free?</summary>
+                    <p>Yes. There is no fee to participate. The competition is organized and funded by Second Foundation.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>How long does a challenge take?</summary>
+                    <p>It depends on the challenge. Online challenges tend to be shorter with strict time limits. In-person rounds allow more time for deeper problems.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>How does scoring work?</summary>
+                    <p>Each scored challenge awards points based on performance. Your seasonal total determines your leaderboard position. Details are shared with each challenge.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I participate under a nickname?</summary>
+                    <p>Yes. Your real identity stays with the platform. On the leaderboard, you compete under a nickname of your choice.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I use AI?</summary>
+                    <p>Every challenge clearly states whether AI tools are allowed. In-person competitive rounds are solved without AI.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Do I need to attend in-person rounds?</summary>
+                    <p>Online challenges can be solved remotely. Some later stages of the competition include in-person rounds for those who progress far enough.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What exactly can I win?</summary>
+                    <p>The main prize is a conference trip to San Francisco, including a ticket and flights. Along the way, you can earn badges, reputation, access to events, expert feedback, and more.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Who creates the challenges?</summary>
+                    <p>The first challenges are created by Second Foundation. Over time, top solvers may earn the opportunity to create challenges themselves.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Is this a recruitment process?</summary>
+                    <p>No. The competition is a standalone platform. You don&rsquo;t need to be interested in working at Second Foundation to participate.</p>
+                </details>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Section -->
-    <section class="section waitlist-section" id="waitlist">
-        <div class="container">
-            <div class="waitlist-content">
-                <h2>The first challenge is coming<span class="dot">.</span></h2>
-                <p class="waitlist-subtitle">Join the waitlist and we'll send it to you when it goes live.</p>
-                <form class="waitlist-form" id="waitlistForm" action="#" method="POST">
-                    <div class="form-group">
+    <!-- Waitlist -->
+    <section class="section section--highlight" id="waitlist">
+        <div class="wrap">
+            <div class="waitlist-block">
+                <h2>The first challenge is coming<span class="gold">.</span></h2>
+                <p class="sub">Join the waitlist and we&rsquo;ll send it to you when it goes live.</p>
+
+                <form class="waitlist-form" id="waitlistForm">
+                    <div class="form-row">
                         <input type="text" name="name" placeholder="Your name" required>
-                    </div>
-                    <div class="form-group">
                         <input type="email" name="email" placeholder="Your email" required>
+                        <button type="submit" class="btn btn-primary">Join the waitlist</button>
                     </div>
-                    <div class="form-group form-checkbox">
-                        <label>
-                            <input type="checkbox" name="gdpr" required>
-                            <span>I agree to the processing of my personal data in accordance with the <a href="#" target="_blank">Privacy Policy</a>.</span>
-                        </label>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-large">Join the waitlist</button>
+                    <label class="form-check">
+                        <input type="checkbox" name="gdpr" required>
+                        <span>I agree to the processing of my personal data in accordance with the <a href="#">Privacy Policy</a>.</span>
+                    </label>
                 </form>
-                <div class="waitlist-success" id="waitlistSuccess" style="display:none;">
-                    <h3>You're on the list<span class="dot">.</span></h3>
-                    <p>We'll send you the first challenge when it goes live.</p>
+
+                <div class="waitlist-ok" id="waitlistOk" hidden>
+                    <h3>You&rsquo;re on the list<span class="gold">.</span></h3>
+                    <p>We&rsquo;ll send you the first challenge when it goes live.</p>
                 </div>
-                <div class="waitlist-details">
+
+                <div class="waitlist-info">
                     <p>Solve the first problem. Enter the competition. See how far you can get.</p>
                     <p><strong>Main prize:</strong> conference ticket + flights to San Francisco.</p>
-                    <p class="waitlist-no-spam">No spam. We'll contact you about the launch and the competition.</p>
+                    <p class="muted-small">No spam. We&rsquo;ll contact you about the launch and the competition.</p>
                 </div>
             </div>
         </div>
@@ -668,26 +538,14 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <svg class="footer-logo" viewBox="0 0 40 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="4" y="0" width="6" height="52" fill="currentColor"/>
-                        <rect x="30" y="0" width="6" height="52" fill="currentColor"/>
-                        <rect x="0" y="0" width="40" height="6" fill="currentColor"/>
-                        <rect x="10" y="0" width="4" height="6" fill="currentColor"/>
-                        <rect x="26" y="0" width="4" height="6" fill="currentColor"/>
-                    </svg>
-                    <span>Second Foundation</span>
-                </div>
-                <div class="footer-links">
-                    <a href="https://www.second-foundation.eu" target="_blank" rel="noopener">Second Foundation</a>
-                    <a href="#">Rules</a>
-                    <a href="#">Privacy</a>
-                </div>
+        <div class="wrap footer-inner">
+            <div class="footer-brand">
+                <img src="images/logo.svg" alt="Second Foundation" class="footer-logo">
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Second Foundation. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://www.second-foundation.eu" target="_blank" rel="noopener">Second Foundation</a>
+                <a href="#">Rules</a>
+                <a href="#">Privacy</a>
             </div>
         </div>
     </footer>

@@ -1,134 +1,63 @@
-// ============================================
-// Second Foundation - Competition Website
-// ============================================
-
 document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.getElementById('navBurger');
+    const overlay = document.getElementById('mobileOverlay');
 
-    // ---- Mobile Navigation ----
-    const navToggle = document.getElementById('navToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+        overlay.classList.toggle('active');
+        document.body.style.overflow = overlay.classList.contains('active') ? 'hidden' : '';
+    });
 
-    if (navToggle && mobileMenu) {
-        navToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
+    overlay.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+            burger.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
         });
+    });
 
-        // Close mobile menu when clicking a link
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                navToggle.classList.remove('active');
-            });
-        });
-    }
-
-    // ---- Navbar scroll effect ----
-    const navbar = document.getElementById('navbar');
-
-    const handleScroll = () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    // ---- Smooth scroll for anchor links ----
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', (e) => {
-            const targetId = anchor.getAttribute('href');
-            if (targetId === '#') return;
-
-            const target = document.querySelector(targetId);
-            if (target) {
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            const id = a.getAttribute('href');
+            if (id === '#') return;
+            const el = document.querySelector(id);
+            if (el) {
                 e.preventDefault();
-                const navHeight = navbar.offsetHeight;
-                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
-
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         });
     });
 
-    // ---- FAQ Accordion ----
-    document.querySelectorAll('.faq-question').forEach(question => {
-        question.addEventListener('click', () => {
-            const item = question.parentElement;
-            const isActive = item.classList.contains('active');
-
-            // Close all other FAQ items
-            document.querySelectorAll('.faq-item.active').forEach(activeItem => {
-                activeItem.classList.remove('active');
-            });
-
-            // Toggle current item
-            if (!isActive) {
-                item.classList.add('active');
-            }
-        });
-    });
-
-    // ---- Waitlist Form ----
+    // Waitlist form
     const form = document.getElementById('waitlistForm');
-    const successMessage = document.getElementById('waitlistSuccess');
+    const ok = document.getElementById('waitlistOk');
 
     if (form) {
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', e => {
             e.preventDefault();
-
-            const formData = new FormData(form);
-            const data = {
-                name: formData.get('name'),
-                email: formData.get('email'),
-                timestamp: new Date().toISOString()
-            };
-
-            // Store locally as backup
-            const submissions = JSON.parse(localStorage.getItem('sf_waitlist') || '[]');
-            submissions.push(data);
-            localStorage.setItem('sf_waitlist', JSON.stringify(submissions));
-
-            // Show success message
-            form.style.display = 'none';
-            successMessage.style.display = 'block';
+            const fd = new FormData(form);
+            const entry = { name: fd.get('name'), email: fd.get('email'), ts: new Date().toISOString() };
+            const list = JSON.parse(localStorage.getItem('sf_waitlist') || '[]');
+            list.push(entry);
+            localStorage.setItem('sf_waitlist', JSON.stringify(list));
+            form.hidden = true;
+            ok.hidden = false;
         });
     }
 
-    // ---- Scroll-triggered fade-in animations ----
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -40px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
+    // Fade in on scroll
+    const obs = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
+                obs.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
 
-    // Add fade-in class to sections and cards
-    const animateElements = document.querySelectorAll(
-        '.section-header, .prize-card, .reward-card, .pillar, .journey-step, ' +
-        '.profile-card, .tier-card, .fairness-card, .community-card, ' +
-        '.might-card, .about-content, .creator-layout, .leaderboard-layout, ' +
-        '.reward-path, .faq-item, .waitlist-content, .final-prize-content'
-    );
-
-    animateElements.forEach((el, index) => {
-        el.classList.add('fade-in');
-        // Stagger animations within the same section
-        const siblings = el.parentElement.querySelectorAll('.fade-in');
-        const siblingIndex = Array.from(siblings).indexOf(el);
-        el.style.transitionDelay = `${siblingIndex * 0.08}s`;
-        observer.observe(el);
+    document.querySelectorAll('.section').forEach(s => {
+        s.classList.add('fade-in');
+        obs.observe(s);
     });
 });
