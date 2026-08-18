@@ -1,89 +1,77 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // ── AOS (Animate On Scroll) ──
-    AOS.init({
-        once: true,
-        offset: 80,
-        easing: 'ease-out-cubic'
-    });
-
-    // ── tsParticles ──
-    if (typeof tsParticles !== 'undefined') {
-        tsParticles.load('tsparticles', {
-            fullScreen: false,
-            fpsLimit: 60,
-            particles: {
-                number: {
-                    value: 50,
-                    density: { enable: true, area: 1200 }
-                },
-                color: { value: ['#be8c00', '#e6e6e6', '#39386c'] },
-                shape: { type: 'circle' },
-                opacity: {
-                    value: { min: 0.05, max: 0.25 },
-                    animation: {
-                        enable: true,
-                        speed: 0.3,
-                        minimumValue: 0.03,
-                        sync: false
-                    }
-                },
-                size: {
-                    value: { min: 1, max: 2.5 },
-                    animation: {
-                        enable: true,
-                        speed: 1,
-                        minimumValue: 0.5,
-                        sync: false
-                    }
-                },
-                links: {
-                    enable: true,
-                    distance: 160,
-                    color: '#be8c00',
-                    opacity: 0.06,
-                    width: 1
-                },
-                move: {
-                    enable: true,
-                    speed: 0.4,
-                    direction: 'none',
-                    random: true,
-                    straight: false,
-                    outModes: { default: 'out' }
-                }
-            },
-            interactivity: {
-                events: {
-                    onHover: {
-                        enable: true,
-                        mode: 'grab'
-                    },
-                    resize: true
-                },
-                modes: {
-                    grab: {
-                        distance: 180,
-                        links: { opacity: 0.15 }
-                    }
-                }
-            },
-            detectRetina: true
+    try {
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                once: true,
+                offset: 60,
+                easing: 'ease-out-cubic'
+            });
+        }
+    } catch(e) {
+        // Fallback: make all AOS elements visible
+        document.querySelectorAll('[data-aos]').forEach(el => {
+            el.style.opacity = '1';
+            el.style.transform = 'none';
         });
     }
 
+    // ── tsParticles ──
+    try {
+        if (typeof tsParticles !== 'undefined') {
+            tsParticles.load('tsparticles', {
+                fullScreen: false,
+                fpsLimit: 60,
+                particles: {
+                    number: {
+                        value: 40,
+                        density: { enable: true, area: 1400 }
+                    },
+                    color: { value: ['#be8c00', '#e6e6e6', '#5a5a8a'] },
+                    shape: { type: 'circle' },
+                    opacity: {
+                        value: { min: 0.03, max: 0.15 },
+                        animation: { enable: true, speed: 0.2, minimumValue: 0.02, sync: false }
+                    },
+                    size: {
+                        value: { min: 0.8, max: 2 },
+                        animation: { enable: true, speed: 0.8, minimumValue: 0.4, sync: false }
+                    },
+                    links: {
+                        enable: true,
+                        distance: 150,
+                        color: '#be8c00',
+                        opacity: 0.04,
+                        width: 0.8
+                    },
+                    move: {
+                        enable: true,
+                        speed: 0.3,
+                        direction: 'none',
+                        random: true,
+                        straight: false,
+                        outModes: { default: 'out' }
+                    }
+                },
+                interactivity: {
+                    events: {
+                        onHover: { enable: true, mode: 'grab' },
+                        resize: true
+                    },
+                    modes: {
+                        grab: { distance: 160, links: { opacity: 0.1 } }
+                    }
+                },
+                detectRetina: true
+            });
+        }
+    } catch(e) {}
+
     // ── Nav scroll effect ──
     const nav = document.getElementById('nav');
-    let lastScroll = 0;
-
     window.addEventListener('scroll', () => {
-        const y = window.scrollY;
-        if (y > 50) {
-            nav.classList.add('scrolled');
-        } else {
-            nav.classList.remove('scrolled');
-        }
-        lastScroll = y;
+        nav.classList.toggle('scrolled', window.scrollY > 50);
     }, { passive: true });
 
     // ── Mobile menu ──
